@@ -7,6 +7,6 @@ Jeu de stratégie gratuit par Eric Mager, créé avec l’aide de Codex et de l�
 ## Installer et jouer
 
 - **Windows 64 bits · 1.1** : [télécharger l’installateur](https://github.com/magerericsev-design/KITSUNE/releases/download/v1.2.0/KITSUNE-Windows-1.1-Installation.exe). L’installateur n’est pas signé ; Windows peut afficher un avertissement.
-- **Android 7 ou plus · 1.2.0** : [télécharger l’APK](https://github.com/magerericsev-design/KITSUNE/releases/download/v1.2.0/Kitsune-1.2.0.apk). Autoriser l’installation hors Google Play si nécessaire. APK signé avec une clé de test. Les essais sur téléphone réel et la saisie avec le clavier tactile restent à effectuer.
+- **Android 7 ou plus · 1.2.0** : [télécharger l’APK](https://github.com/magerericsev-design/KITSUNE/releases/download/v1.2.0/Kitsune-1.2.0.apk). Autoriser l’installation hors Google Play si nécessaire. APK signé avec une clé de test. Le créateur indique que son premier essai sur Redmi 15 5G fonctionne bien ; la saisie avec le clavier tactile reste à vérifier.
 
 [Release et sommes SHA-256](https://github.com/magerericsev-design/KITSUNE/releases/tag/v1.2.0). Le code source n’est pas inclus dans ce dépôt de distribution.
