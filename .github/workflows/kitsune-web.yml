@@ -24,6 +24,8 @@ jobs:
           echo "978c512dfe9e0f9fa2594681ade30b8d03debbfb61d3bd33a6d1e064048bb9d8  game.zip" | sha256sum --check
           mkdir public
           unzip -q game.zip -d public
+          mkdir public/v2
+          unzip -q game.zip -d public/v2
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
