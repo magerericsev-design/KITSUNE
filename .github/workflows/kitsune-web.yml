@@ -20,8 +20,8 @@ jobs:
     steps:
       - name: Download verified game build
         run: |
-          curl --fail --location --retry 3 --output game.zip https://github.com/magerericsev-design/KITSUNE/releases/download/v1.2.0/KITSUNE-Web-PWA-v3.zip
-          echo "21054ce78e7143cfcd719eb78f304f591a982228eaea59132ef107cdbf6cfd98  game.zip" | sha256sum --check
+          curl --fail --location --retry 3 --output game.zip https://github.com/magerericsev-design/KITSUNE/releases/download/v2.0.0/KITSUNE-Web-PWA-2.0.0.zip
+          echo "978c512dfe9e0f9fa2594681ade30b8d03debbfb61d3bd33a6d1e064048bb9d8  game.zip" | sha256sum --check
           mkdir public
           unzip -q game.zip -d public
       - uses: actions/configure-pages@v5
