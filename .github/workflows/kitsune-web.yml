@@ -18,14 +18,16 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Download verified game build
+      - name: Download verified builds
         run: |
-          curl --fail --location --retry 3 --output game.zip https://github.com/magerericsev-design/KITSUNE/releases/download/v2.0.0/KITSUNE-Web-PWA-2.0.0.zip
-          echo "978c512dfe9e0f9fa2594681ade30b8d03debbfb61d3bd33a6d1e064048bb9d8  game.zip" | sha256sum --check
-          mkdir public
+          curl --fail --location --retry 3 --output old.zip https://github.com/magerericsev-design/KITSUNE/releases/download/v2.0.0/KITSUNE-Web-PWA-2.0.0.zip
+          echo "978c512dfe9e0f9fa2594681ade30b8d03debbfb61d3bd33a6d1e064048bb9d8  old.zip" | sha256sum --check
+          curl --fail --location --retry 3 --output game.zip https://github.com/magerericsev-design/KITSUNE/releases/download/v2.1.0/KITSUNE-Web-PWA-2.1.0.zip
+          echo "c97c7b54ab76e05d5fda57197b52deb2e99ade4668b4dc92ea5f9638e76b9937  game.zip" | sha256sum --check
+          mkdir -p public/v2 public/v2.1
+          unzip -q old.zip -d public/v2
+          unzip -q game.zip -d public/v2.1
           unzip -q game.zip -d public
-          mkdir public/v2
-          unzip -q game.zip -d public/v2
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
