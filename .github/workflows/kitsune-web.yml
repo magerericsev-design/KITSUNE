@@ -27,7 +27,7 @@ jobs:
           mkdir -p public/v2 public/v2.1
           unzip -q old.zip -d public/v2
           unzip -q game.zip -d public/v2.1
-          unzip -q game.zip -d public
+          printf '%s\n' '<!doctype html><html lang="fr"><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=v2.1/index.html"><title>KITSUNE</title><p><a href="v2.1/index.html">Jouer à KITSUNE 2.1</a></p></html>' > public/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
